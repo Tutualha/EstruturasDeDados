@@ -1,4 +1,4 @@
-# EstruturasDeDados
+# Estruturas De Dados
 Repositório para estudo de listas encadeadas, listas ordenadas e árvores binárias em Python e C+
 
 Para Começar precisamos entender o que é uma lista ordenadas, encadeada e uma arvore binaria.
