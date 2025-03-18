@@ -3,7 +3,7 @@ Repositório para estudo de listas encadeadas, listas ordenadas e árvores biná
 
 Para Começar precisamos entender o que é uma lista ordenadas, encadeada e uma arvore binaria.
 
-
+### **entendimento de lista ordenada:** 
 apostila para comandos de lista e manipulação de dados em python:
 [Apostila Collab com Comando de python](https://colab.research.google.com/drive/1OPTb05wEx_ZismDnQayHkC3HCFNdMw1K?usp=sharing) 
 
