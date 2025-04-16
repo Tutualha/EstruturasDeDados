@@ -1,77 +1,101 @@
-# Estruturas De Dados
-Repositório para estudo de listas encadeadas, listas ordenadas e árvores binárias em Python e C+
+# Estruturas de Dados  
 
-Para Começar precisamos entender o que é uma lista ordenadas, encadeada e uma arvore binaria.
+Repositório para estudo de listas encadeadas, listas ordenadas e árvores binárias em **Python** e **JavaScript**.
 
-### **entendimento de lista ordenada:** 
-apostila para comandos de lista e manipulação de dados em python:
-[Apostila Collab com Comando de python](https://colab.research.google.com/drive/1OPTb05wEx_ZismDnQayHkC3HCFNdMw1K?usp=sharing) 
+Para começar, precisamos entender o conceito de cada estrutura que vamos trabalhar.
 
+---
 
+## 📋 Listas Ordenadas  
 
-## Listas Encadeadas (Linked Lists)
-**O que é uma lista encadeada?**
+Lista ordenada é uma estrutura de dados que armazena elementos em uma ordem definida, que pode ser alfabética (de A a Z), crescente, decrescente, entre outras.  
+A forma de ordenação depende de como você deseja organizar os elementos e dos critérios estabelecidos para essa ordenação.
 
-Uma estrutura de dados linear onde cada elemento (chamado nó) contém:
-Um valor (dado)
-Um ponteiro para o próximo nó na sequência
+### ✅ Como criar uma lista?  
 
-Analogia:
-Imagine uma corrente formada por elos individuais, onde cada elo sabe apenas onde está o próximo elo, mas não conhece toda a cadeia.
+No Python, é bem simples. Você pode tanto usar a função `list()`:
 
-Este tipo de lista normalmente é usado em:
+```python
+list(("elemento", "elemento1", "elemento2", ...))
+```
 
-* Gerenciamento de histórico de comandos em editores de texto
+Ou usar colchetes `[]`:
 
-* Sistemas de cache em navegadores web
+```python
+lista = ["elemento", "elemento1", "elemento2", ...]
+```
 
-* Implementação de filas e pilhas dinâmicas
+Assim se cria uma lista de dados em Python.
 
-## Como funciona a lista encadeda em python
-Primeiro temos que montar sua estrutura com o seguintes codigos.
+### 🔃 E pra **ordenar** essa lista?
 
+Confira uma apostila com comandos úteis para manipulação de listas em Python:  
+📘 [Apostila Collab com comandos de Python](https://colab.research.google.com/drive/1OPTb05wEx_ZismDnQayHkC3HCFNdMw1K?usp=sharing)
 
-Primeiro vamos criar o node.py que é exatamente o nó:
-~~~
+---
+
+## 🔗 Listas Encadeadas (Linked Lists)  
+
+### O que é uma lista encadeada?
+
+Uma estrutura de dados linear onde cada elemento (chamado **nó**) contém:  
+- Um valor (dado)  
+- Um ponteiro para o próximo nó na sequência  
+
+**💡 Analogia:**  
+Imagine uma corrente formada por elos individuais. Cada elo sabe apenas onde está o próximo, mas não conhece a cadeia toda.
+
+Listas encadeadas são comumente usadas em:  
+- Gerenciamento de histórico em editores de texto  
+- Sistemas de cache de navegadores  
+- Implementação de filas e pilhas dinâmicas  
+
+---
+
+## 🛠 Como funciona a lista encadeada em Python?
+
+### 1️⃣ Criando o nó (`node.py`):
+
+```python
 class Node:
     def __init__(self, data):
-        # Armazenar dados
+        # Armazena o dado
         self.data = data
-        # Aponta o proximo nó (ponteiro)
+        # Aponta para o próximo nó
         self.next = None
-~~~
-Depois vamos criar a parte principal da estrutura da lista encadeada:
-~~~
+```
+
+### 2️⃣ Criando a estrutura da lista encadeada:
+
+```python
 class ListaEncadeada:
     def __init__(self):
-        self.head = None # cabeça
-        self.size = 0 # conta elementos
-~~~~
-Essa parte do codigo cria um novo nó e caso a lista esteja vazia esse novo nó se torna a cabeça:
-```
-    novo_node = Node(data)
-    if not self.head:  # Lista vazia
-        self.head = novo_node
-...
+        self.head = None  # Cabeça da lista
+        self.size = 0     # Conta os elementos
 ```
 
-caso nao esteja vazia:
+### 3️⃣ Inserindo elementos:
 
+```python
+novo_node = Node(data)
+if not self.head:  # Lista vazia
+    self.head = novo_node
+else:  # Lista com elementos
+    atual = self.head
+    while atual.next:
+        atual = atual.next
+    atual.next = novo_node
+
+self.size += 1  # Incrementa o contador
 ```
-...
- else:              # Lista com elementos
-        atual = self.head
-        while atual.next:
-            atual = atual.next
-        atual.next = novo_node
-    self.size += 1
-```
 
-ela vai percorrer o ultimo nó ate que next seja None
-e faz a ligação do novo no com o ultimo
-e o `self.size` incrementa no contador
+Esse código percorre até o último nó (onde `next` é `None`), faz a ligação com o novo nó e atualiza o tamanho da lista.
 
+---
 
+## 🎥 Referência em vídeo  
 
-# Referencia
-[![Estrutura de Dados - Construindo uma Lista Encadedada](https://i.ytimg.com/an_webp/jIM87UqOq3g/mqdefault_6s.webp?du=3000&sqp=CPig574G&rs=AOn4CLD4hrvb8MdNcjbjbp02hNSBzhr_UA)](https://www.youtube.com/embed/jIM87UqOq3g?si=h5vkES8pPcrSLjCB)
+[Clique para assistir no YouTube](https://www.youtube.com/embed/jIM87UqOq3g?si=h5vkES8pPcrSLjCB)  
+[![Estrutura de Dados - Construindo uma Lista Encadeada](https://i.ytimg.com/an_webp/jIM87UqOq3g/mqdefault_6s.webp?du=3000&sqp=CPig574G&rs=AOn4CLD4hrvb8MdNcjbjbp02hNSBzhr_UA)](https://www.youtube.com/embed/jIM87UqOq3g?si=h5vkES8pPcrSLjCB)
+
+---
