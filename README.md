@@ -28,6 +28,62 @@ lista = ["elemento", "elemento1", "elemento2", ...]
 Assim se cria uma lista de dados em Python.
 
 ### 🔃 E pra **ordenar** essa lista?
+Ordenar uma lista em Python é muito simples graças às funções nativas `sort()` e `sorted()`, porém, o correto para se ORDENAR é `sort()`.
+
+---
+
+## 📌 Diferença entre `sort()` e `sorted()`
+
+| Função     | Tipo de ordenação     | Modifica a lista original? | Retorna nova lista? |
+|------------|------------------------|-----------------------------|----------------------|
+| `sort()`   | Ordenação **in-place** | ✅ Sim                      | ❌ Não               |
+| `sorted()` | Ordenação pura         | ❌ Não                      | ✅ Sim               |
+
+---
+
+## ✅ Usando `sort()`
+
+A função `sort()` **ordena a própria lista**, ou seja, modifica o conteúdo original.
+```python
+lista = [5, 2, 9, 1]
+lista.sort()
+print(lista)  # Saída: [1, 2, 5, 9]
+```
+tambem é possível ordenar em ordem decrescente:
+```python
+lista = [5, 2, 9, 1]
+lista.sort(reverse=True)
+print(lista)  # Saída: [9, 5, 2, 1]
+```
+---
+## ✅ Usando `sorted()`
+A função `sorted()` **não modifica a lista original**, mas retorna uma nova lista ordenada.
+```python
+lista = [5, 2, 9, 1]
+lista_ordenada = sorted(lista)
+print(lista_ordenada)  # Saída: [1, 2, 5, 9]
+print(lista)  # Saída: [5, 2, 9, 1]
+```
+tambem é possível ordenar em ordem decrescente:
+```python
+lista = [5, 2, 9, 1]
+lista_ordenada = sorted(lista, reverse=True)
+print(lista_ordenada)  # Saída: [9, 5, 2, 1]
+print(lista)  # Saída: [5, 2, 9, 1]
+```
+
+Por fim, você deve entender que nem sempre a lista vai ser ordenada de forma correta, em alguns casos você tera que criar funções situacionais. Por exemplo ordernar uma lista de datas no padrão brasileiro (dd/mm/aaaa) ou americano (mm/dd/aaaa).
+```python
+from datetime import datetime
+lista = ["01/02/2023", "03/04/2022", "05/06/2021"]
+
+lista_ordenada = sorted(lista, key=lambda x: 
+
+datetime.strptime(x, "%d/%m/%Y"))
+
+print(lista_ordenada)  # Saída: ['05/06/2021', '03/04/2022', '01/02/2023']
+```
+
 
 Confira uma apostila com comandos úteis para manipulação de listas em Python:  
 📘 [Apostila Collab com comandos de Python](https://colab.research.google.com/drive/1OPTb05wEx_ZismDnQayHkC3HCFNdMw1K?usp=sharing)
