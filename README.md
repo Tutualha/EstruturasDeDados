@@ -3,8 +3,9 @@
 Repositório para estudo de listas encadeadas, listas ordenadas e árvores binárias em **Python** e **JavaScript**.
 
 Para começar, precisamos entender o conceito de cada estrutura que vamos trabalhar.
-
 ---
+# PYTHON 🐍
+
 
 ## 📋 Listas Ordenadas  
 
