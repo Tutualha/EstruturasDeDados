@@ -17,25 +17,3 @@ lista_de_dados.sort(function (a, b) {
     }
     return 0;
 });
-
-const tbody = document.querySelector('#tabela-dados tbody');
-
-// Adiciona os dados ordenados à tabela
-lista_de_dados.forEach(item => {
-    const tr = document.createElement('tr');
-    tr.innerHTML = `<td>${item.nome}</td><td>${item.idade}</td><td>${item.cidade}</td>`;
-    tbody.appendChild(tr);
-});
-
-// Seleciona a lista não ordenada
-const ul = document.querySelector('#lista-strings');
-
-// Adiciona as strings ordenadas à lista
-lista.forEach(item => {
-    const li = document.createElement('li');
-    li.textContent = item;
-    ul.appendChild(li);
-});
-
-console.log(lista_de_dados);
-console.log(lista);
