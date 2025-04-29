@@ -7,4 +7,4 @@
 - [Atividade 5 - Colab](https://colab.research.google.com/drive/1ji6EbT7Fbfwfm15zr4BBpS1LzqoPPGe-?usp=sharing)
 - [Atividade 6 - Colab](https://colab.research.google.com/drive/1RETMtk3fef1CUSL0bTU0PJKHFuIYAsPB?usp=sharing)
 - [Atividade 7 - Colab](https://colab.research.google.com/drive/15jC04thfGQFaQuVydGUMHuY-kxl-PY0y?usp=sharing)
-- [Atividade 7 - Colab](https://colab.research.google.com/drive/1xi9zFz3O5id6l02bhLNpvvEfbD1glAoL?usp=sharing)
+- [Atividade 8 - Colab](https://colab.research.google.com/drive/1xi9zFz3O5id6l02bhLNpvvEfbD1glAoL?usp=sharing)
